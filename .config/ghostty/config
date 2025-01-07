@@ -1,0 +1,6 @@
+font-size = 19.5
+background-opacity = 0.75
+background-blur-radius = 20
+background = #08080b
+window-decoration = false
+window-save-state = always
