@@ -20,6 +20,7 @@ return {
           "snippets",
           "buffer",
         },
+	cmdline = {},
       },
     },
     opts_extend = {

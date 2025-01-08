@@ -15,10 +15,6 @@ return {
         previewer = false,
       },
     },
-    grep = {
-      rg_glob = true,
-      glob_flag = "--iglob",
-    },
     previewers = {
         builtin = {
           syntax_limit_b = 1024 * 100,
