@@ -15,11 +15,6 @@ return {
         previewer = false,
       },
     },
-    previewers = {
-        builtin = {
-          syntax_limit_b = 1024 * 100,
-        },
-    },
   },
   keys = {
     {
