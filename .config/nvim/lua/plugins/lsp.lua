@@ -42,36 +42,12 @@ return {
       local lspconfig = require("lspconfig")
       local capabilities = require("blink.cmp").get_lsp_capabilities()
 
-      capabilities.textDocument.completion.completionItem = {
-        documentationFormat = {
-          "markdown",
-          "plaintext",
-        },
-        snippetSupport = true,
-        preselectSupport = true,
-        insertReplaceSupport = true,
-        labelDetailsSupport = true,
-        deprecatedSupport = true,
-        commitCharactersSupport = true,
-        tagSupport = {
-          valueSet = {
-            1,
-          },
-        },
-        resolveSupport = {
-          properties = {
-            "documentation",
-            "detail",
-            "additionalTextEdits",
-          },
-        },
-      }
-
       local servers = {
         jsonls = {},
         jdtls = {},
         tailwindcss = {},
         eslint = {},
+        solidity_ls_nomicfoundation = {},
 
         zls = {
           settings = {
