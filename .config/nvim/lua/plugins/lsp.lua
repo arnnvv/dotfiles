@@ -17,8 +17,8 @@ return {
         default = {
           "lsp",
           "path",
-          "snippets",
           "buffer",
+          "snippets",
         },
 	cmdline = {},
       },
@@ -42,12 +42,41 @@ return {
       local lspconfig = require("lspconfig")
       local capabilities = require("blink.cmp").get_lsp_capabilities()
 
+      require("lspconfig.configs").solidity = {
+        default_config = {
+          cmd = {
+	    "nomicfoundation-solidity-language-server",
+	    "--stdio",
+          },
+          filetypes = {
+	    "solidity",
+          },
+          root_dir = lspconfig.util.find_git_ancestor,
+          single_file_support = true,
+        },
+      }
+
       local servers = {
         jsonls = {},
         jdtls = {},
         tailwindcss = {},
         eslint = {},
-        solidity_ls_nomicfoundation = {},
+        solidity = {
+	  on_attach = on_attach,
+        },
+        clangd = {
+          cmd = {
+            "clangd",
+            "--background-index",
+            "--clang-tidy",
+            "--log=verbose",
+          },
+          init_options = {
+            fallbackFlags = {
+              "-std=c++23",
+            },
+          },
+        },
 
         zls = {
           settings = {

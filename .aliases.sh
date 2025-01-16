@@ -34,4 +34,3 @@ alias z='cd "$HOME/Documents/$(fd --type d --max-depth 1 --base-directory $HOME/
 alias sl='solana'
 alias lk='brew update && brew ls --formulae | xargs brew upgrade --formulae && brew ls --cask | xargs brew upgrade --cask'
 alias kl='brew cleanup --prune-prefix'
-alias man='tldr'

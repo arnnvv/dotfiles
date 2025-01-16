@@ -27,7 +27,7 @@ bindkey -e
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 zshaddhistory() {
-  [[ $1 =~ ^(dx|pa|pad|docker|cln|sudo|sl)$ ]] || return 1
+  [[ $1 =~ ^(dx|pa|pad|podman|cln|sudo|sl)$ ]] || return 1
 }
 source "$HOME/Desktop/.aliases.sh"
 source "$HOME/.zshenv"

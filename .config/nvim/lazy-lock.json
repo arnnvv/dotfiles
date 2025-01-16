@@ -1,6 +1,6 @@
 {
   "blink.cmp": { "branch": "main", "commit": "1cc3b1a908fbcfd15451c4772759549724f38524" },
-  "fzf-lua": { "branch": "main", "commit": "6f7249741168c0751356e3b6c5c1e3bade833b6b" },
+  "fzf-lua": { "branch": "main", "commit": "047f6862bb0c9710c06e5432d7ad50da9ea00e46" },
   "lazy.nvim": { "branch": "main", "commit": "d8f26efd456190241afd1b0f5235fe6fdba13d4a" },
   "marlin.nvim": { "branch": "main", "commit": "45eaa7d3cf4a7875c23652f20640d80f28b1fcc4" },
   "nvim-lspconfig": { "branch": "master", "commit": "339ccc81e08793c3af9b83882a6ebd90c9cc0d3b" }
