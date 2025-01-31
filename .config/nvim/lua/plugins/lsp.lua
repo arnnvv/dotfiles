@@ -7,8 +7,8 @@ return {
     version = "*",
     opts = {
       appearance = {
-        use_nvim_cmp_as_default = true,
         nerd_font_variant = "mono",
+        use_nvim_cmp_as_default = true,
       },
       keymap = {
         preset = "enter",
@@ -35,8 +35,8 @@ return {
       "LspUninstall",
     },
     event = {
-      "BufReadPost",
       "BufNewFile",
+      "BufReadPost",
     },
     config = function()
       local lspconfig = require("lspconfig")
@@ -58,12 +58,11 @@ return {
 
       local servers = {
         jsonls = {},
-        jdtls = {},
-        tailwindcss = {},
         eslint = {},
         solidity = {
 	  on_attach = on_attach,
         },
+        tailwindcss = {},
         clangd = {
           cmd = {
             "clangd",
@@ -149,8 +148,8 @@ return {
                 renderColons = true,
                 typeHints = {
                   enable = true,
-                  hideClosureInitialization = false,
                   hideNamedConstructor = false,
+                  hideClosureInitialization = false,
                 },
               },
             },
@@ -160,20 +159,20 @@ return {
         gopls = {
           settings = {
             gopls = {
-              completeUnimported = true,
+              gofumpt = true,
+              staticcheck = true,
               analyses = {
                 unusedparams = true,
               },
-              staticcheck = true,
-              gofumpt = true,
+              completeUnimported = true,
               hints = {
-                rangeVariableTypes = true,
                 parameterNames = true,
                 constantValues = true,
+                rangeVariableTypes = true,
                 assignVariableTypes = true,
-                compositeLiteralFields = true,
                 compositeLiteralTypes = true,
                 functionTypeParameters = true,
+                compositeLiteralFields = true,
               },
             },
           },

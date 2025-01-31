@@ -1,7 +1,6 @@
 return {
   {
     "ibhagwan/fzf-lua",
-    cmd = "Fzflua",
     opts = {
       defaults = {
         file_icons = false,
