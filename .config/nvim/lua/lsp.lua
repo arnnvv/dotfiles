@@ -18,9 +18,10 @@ return {
           'lsp',
           'path',
           'buffer',
-          'snippets',
         },
-	cmdline = {},
+      },
+      cmdline = {
+        enabled = false,
       },
     },
     opts_extend = {
