@@ -1,4 +1,5 @@
 vim.keymap.set('n', '<leader>n', ':Explore<CR>')
+vim.keymap.set('n', '<Esc>', ':nohlsearch<CR>', { silent = true })
 vim.keymap.set('n', 'd', '"_d', { noremap = true })
 vim.keymap.set('n', 'c', '"_c', { noremap = true })
 vim.keymap.set(
