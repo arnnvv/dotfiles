@@ -23,6 +23,9 @@ return {
       cmdline = {
         enabled = false,
       },
+      fuzzy = {
+        implementation = "rust",
+      }
     },
     opts_extend = {
       'sources.default',
