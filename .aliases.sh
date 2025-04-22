@@ -7,6 +7,8 @@ alias v='nvim'
 alias v.='fd --type f --hidden --exclude .git | fzf | xargs nvim'
 alias ds='podman system prune -a --volumes'
 alias db='psql "$(grep -E "^DATABASE_URL=" .env | sed -e "s/^DATABASE_URL=//")"'
+alias dbd='pg_dump "$(grep -E "^DATABASE_URL=" .env | sed -e "s/^DATABASE_URL=//")" --data-only -f seed.sql'
+alias dbc='psql "$(grep -E "^DATABASE_URL=" .env | sed -e "s/^DATABASE_URL=//")" -c "DROP SCHEMA public CASCADE; CREATE SCHEMA public; GRANT ALL ON SCHEMA public TO public;"'
 alias cln='git clone'
 alias ss='git init -b main'
 alias cm='git add -N . && git add -p && git commit -m'
@@ -37,4 +39,7 @@ alias cl='curl -v'
 alias spd='sudo wdutil info | awk -F ":" "/Tx Rate/ {gsub(/^[ \t]+/, \"\", \$2); print \$2}"'
 co() {
   cat "$1" | pbcopy
+}
+gk() {
+  git reset --hard HEAD~"$1"
 }

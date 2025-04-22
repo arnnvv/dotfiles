@@ -66,6 +66,7 @@ return {
 	  on_attach = on_attach,
         },
         tailwindcss = {},
+        dartls = {},
         clangd = {
           cmd = {
             'clangd',
