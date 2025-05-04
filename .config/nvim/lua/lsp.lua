@@ -4,7 +4,7 @@ return {
     event = {
       'LspAttach',
     },
-    version = '*',
+    version = '1.*',
     opts = {
       appearance = {
         nerd_font_variant = 'mono',

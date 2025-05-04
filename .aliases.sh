@@ -7,7 +7,7 @@ alias v='nvim'
 alias v.='fd --type f --hidden --exclude .git | fzf | xargs nvim'
 alias ds='podman system prune -a --volumes'
 alias db='psql "$(grep -E "^DATABASE_URL=" .env | sed -e "s/^DATABASE_URL=//")"'
-alias dbm='rm ./seed.sql && pg_dump "$(grep -E "^DATABASE_URL=" .env | sed -e "s/^DATABASE_URL=//")" --data-only -f seed.sql && psql "$(grep -E "^DATABASE_URL=" .env | sed -e "s/^DATABASE_URL=//")" -c "DROP SCHEMA public CASCADE; CREATE SCHEMA public; GRANT ALL ON SCHEMA public TO public;" && psql "$(grep -E "^DATABASE_URL=" .env | sed -e "s/^DATABASE_URL=//")" < seed.sql'
+alias dg='rm ./seed.sql && pg_dump "$(grep -E "^DATABASE_URL=" .env | sed -e "s/^DATABASE_URL=//")" --data-only -f seed.sql && psql "$(grep -E "^DATABASE_URL=" .env | sed -e "s/^DATABASE_URL=//")" -c "DROP SCHEMA public CASCADE; CREATE SCHEMA public; GRANT ALL ON SCHEMA public TO public;"'
 alias cln='git clone'
 alias ss='git init -b main'
 alias cm='git add -N . && git add -p && git commit -m'
@@ -34,11 +34,15 @@ alias z='cd "$HOME/Documents/$(fd --type d --max-depth 1 --base-directory $HOME/
 alias sl='solana'
 alias lk='brew update && brew ls --formulae | xargs brew upgrade --formulae && brew ls --cask | xargs brew upgrade --cask'
 alias kl='brew cleanup && brew cleanup --prune-prefix'
-alias cl='curl -v'
 alias spd='sudo wdutil info | awk -F ":" "/Tx Rate/ {gsub(/^[ \t]+/, \"\", \$2); print \$2}"'
+alias gf='gofmt -w .'
+alias redis='redis-cli --tls -u'
 co() {
   cat "$1" | pbcopy
 }
 gk() {
   git reset --hard HEAD~"$1"
+}
+cl() {
+  curl -v "$@" | jq
 }
