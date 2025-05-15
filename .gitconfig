@@ -1,0 +1,6 @@
+[user]
+ name = arnnvv
+ email = arnav.900@protonmail.com
+[push]
+ default = current
+ autoSetupRemote = true
