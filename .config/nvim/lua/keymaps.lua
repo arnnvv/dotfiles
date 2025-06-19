@@ -1,6 +1,7 @@
 vim.keymap.set('n', '<leader>n', ':Explore<CR>')
 vim.keymap.set('n', '<Esc>', ':nohlsearch<CR>', { silent = true })
 vim.keymap.set('n', 'd', '"_d', { noremap = true })
+vim.keymap.set('n', 'ff', ':!gofmt -w .<CR>', { silent = true })
 vim.keymap.set('n', 'D', '"_D', { noremap = true })
 vim.keymap.set(
   'n',
@@ -24,7 +25,7 @@ vim.keymap.set(
   'n',
   '<C-p>',
   function()
-    require('fzf').find_files()
+    require('tv').find_files()
   end,
   {
     noremap = true,
@@ -35,7 +36,7 @@ vim.keymap.set(
   'n',
   '<C-o>',
   function()
-    require('fzf').grep_project()
+    require('tv').grep_project()
   end,
   {
     noremap = true,
