@@ -14,6 +14,7 @@ else
     source ~/.zsh_brew_cache
   fi
 fi
+source <(fzf --zsh)
 export NODE_EXTRA_CA_CERTS='/opt/homebrew/etc/ca-certificates/cert.pem'
 export CURL_CA_BUNDLE='/opt/homebrew/etc/ca-certificates/cert.pem'
 export SSL_CERT_FILE='/opt/homebrew/etc/openssl@3/cert.pem'
