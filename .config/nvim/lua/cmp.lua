@@ -28,6 +28,11 @@ return {
     keymap = {
       preset = 'enter',
     },
+    completion = {
+      documentation = {
+        auto_show = false,
+      },
+    },
     sources = {
       default = {
         'lsp',
@@ -40,7 +45,7 @@ return {
     },
     fuzzy = {
       implementation = 'rust',
-    }
+    },
   },
   opts_extend = {
     'sources.default',

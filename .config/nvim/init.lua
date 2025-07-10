@@ -51,7 +51,7 @@ vim.api.nvim_create_autocmd('InsertEnter', {
     require('autopair').setup_autopairs()
   end,
 })
-
+require('lsp')
 require('lazy').setup({
   spec = {
     {
@@ -62,5 +62,4 @@ require('lazy').setup({
     enabled = false,
   },
 })
-require('lsp')
 require('keymaps')
