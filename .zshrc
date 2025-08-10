@@ -27,11 +27,11 @@ path=(
   "/opt/homebrew/opt/postgresql@17/bin"
   "/opt/homebrew/opt/ruby/bin"
   "$HOME/.local/share/solana/install/active_release/bin"
-  "$HOME/development/flutter/bin"
   "$HOME/.local/bin"
   "$PNPM_HOME"
   $path
 )
+source <(fzf --zsh)
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git --exclude .jj'
 [[ -f "$HOME/Desktop/.aliases.sh" ]] && source "$HOME/Desktop/.aliases.sh"
 [[ -f "$HOME/.zshenv" ]] && source "$HOME/.zshenv"
@@ -39,6 +39,3 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git --exclude .jj'
 autoload -Uz compinit
 compinit -C
 [[ -s '/usr/local/share/zsh/site-functions/_bun' ]] && source '/usr/local/share/zsh/site-functions/_bun'
-if command -v jj &>/dev/null; then
-  source <(jj util completion zsh)
-fi

@@ -1,3 +1,5 @@
+.config/btop/
+.config/wireshark/
 .config/containers/
 .config/solana/id.json
 .config/raycast/ca.pem

@@ -28,10 +28,10 @@ vim.g.netrw_banner = 0
 vim.cmd.colorscheme('habamax')
 
 vim.api.nvim_set_hl(0, 'Normal', {
-    bg = 'none',
+  bg = 'none',
 })
 vim.api.nvim_set_hl(0, 'NormalFloat', {
-    bg = 'none',
+  bg = 'none',
 })
 
 vim.opt.shell = '/bin/dash'
@@ -51,7 +51,7 @@ vim.api.nvim_create_autocmd('InsertEnter', {
     require('autopair').setup_autopairs()
   end,
 })
-
+require('lsp')
 require('lazy').setup({
   spec = {
     {
@@ -62,5 +62,4 @@ require('lazy').setup({
     enabled = false,
   },
 })
-require('lsp')
 require('keymaps')
