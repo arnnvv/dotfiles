@@ -24,7 +24,7 @@ export PNPM_HOME="$HOME/Library/pnpm"
 typeset -U path
 path=(
   "/opt/homebrew/opt/curl/bin"
-  "/opt/homebrew/opt/postgresql@17/bin"
+  "/opt/homebrew/opt/postgresql@18/bin"
   "/opt/homebrew/opt/ruby/bin"
   "$HOME/.local/share/solana/install/active_release/bin"
   "$HOME/.local/bin"
