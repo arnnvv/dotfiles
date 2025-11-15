@@ -27,6 +27,8 @@ vim.g.netrw_banner = 0
 
 vim.cmd.colorscheme('habamax')
 
+vim.api.nvim_set_hl(0, "StatusLine", { fg = "white", bg = "NONE" })
+vim.api.nvim_set_hl(0, "StatusLineNC", { fg = "white", bg = "NONE" })
 vim.api.nvim_set_hl(0, 'Normal', {
   bg = 'none',
 })
@@ -39,6 +41,7 @@ vim.opt.clipboard:append('unnamedplus')
 vim.opt.scrolloff = 10
 vim.opt.mouse = ''
 vim.opt.guicursor = ''
+vim.opt.swapfile = false
 
 vim.wo.number = true
 vim.wo.relativenumber = true
