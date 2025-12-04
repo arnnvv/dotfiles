@@ -42,6 +42,9 @@ vim.opt.scrolloff = 10
 vim.opt.mouse = ''
 vim.opt.guicursor = ''
 vim.opt.swapfile = false
+vim.opt.linebreak = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 vim.wo.number = true
 vim.wo.relativenumber = true

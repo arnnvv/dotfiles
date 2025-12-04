@@ -1,4 +1,5 @@
 HISTFILE=~/.zsh_history
+DISABLE_AUTO_TITLE="true"
 HISTSIZE=5000
 SAVEHIST=2000
 setopt appendhistory hist_find_no_dups inc_append_history hist_ignore_all_dups
