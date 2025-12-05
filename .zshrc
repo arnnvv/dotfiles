@@ -32,3 +32,4 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git --exclude .jj'
 [[ -f "$HOME/.zshenv" ]] && source "$HOME/.zshenv"
 autoload -Uz compinit
 compinit -C
+export PATH="$HOME/nvim-macos-arm64/bin:$PATH"
