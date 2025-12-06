@@ -15,10 +15,25 @@ vim.keymap.set(
 vim.keymap.set(
   'n',
   '<C-a>',
-  vim.diagnostic.goto_next,
+  function()
+    vim.diagnostic.jump({ count = 1, float = true })
+  end,
   {
-    noremap = true,
     silent = true,
+    noremap = true,
+    desc = "Next Diagnostic",
+  }
+)
+vim.keymap.set(
+  'n',
+  '<C-x>',
+  function()
+    vim.diagnostic.jump({ count = -1, float = true })
+  end,
+  {
+    silent = true,
+    noremap = true,
+    desc = "Prev Diagnostic",
   }
 )
 vim.keymap.set(
