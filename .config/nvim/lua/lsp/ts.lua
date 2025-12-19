@@ -19,7 +19,7 @@ vim.lsp.config('ts_ls', {
       inlayHints = {
         includeInlayParameterNameHints = 'literal',
         includeInlayFunctionParameterTypeHints = true,
-        includeInlayVariableTypeHints = false,
+        includeInlayVariableTypeHints = true,
         includeInlayFunctionLikeReturnTypeHints = true,
         includeInlayEnumMemberValueHints = true,
         includeInlayPropertyDeclarationTypeHints = true,

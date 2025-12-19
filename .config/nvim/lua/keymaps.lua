@@ -1,7 +1,8 @@
 vim.keymap.set('n', '<leader>n', ':Explore<CR>')
 vim.keymap.set('n', '<Esc>', ':nohlsearch<CR>', { silent = true })
 vim.keymap.set('n', 'd', '"_d', { noremap = true })
-vim.keymap.set('n', 'D', '"_D', { noremap = true })
+vim.keymap.set('n', 'c', '"_c', { noremap = true })
+vim.keymap.set('n', 'C', '"_C', { noremap = true })
 vim.keymap.set('n', '<leader>ff', vim.lsp.buf.format)
 vim.keymap.set(
   'n',
